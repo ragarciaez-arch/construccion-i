@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Construcción I · Apuntes de clase</title>
+<style>
+:root{--navy:#17324d;--blue:#2e628c;--paper:#f5f3ed;--card:#fff;--ink:#1f2933;--muted:#687785;--line:#dce3e8;--gold:#b58a43}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(120deg,#122c45,#274f70);color:white;padding:52px 6vw 44px}
+header small{letter-spacing:.14em;text-transform:uppercase;opacity:.78} h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,60px);margin:8px 0 4px} header p{max-width:800px;opacity:.88}
+.wrap{max-width:1180px;margin:auto;padding:30px 22px 80px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+button{border:1px solid #cbd5dc;background:white;border-radius:9px;padding:9px 13px;cursor:pointer;color:var(--navy);font-weight:650}
+.session{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:18px 0;overflow:hidden;box-shadow:0 5px 18px #18334c0c}
+.session>summary{list-style:none;cursor:pointer;padding:23px 25px;display:flex;align-items:center;gap:16px}.session>summary::-webkit-details-marker{display:none}
+.num{background:var(--navy);color:white;min-width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-weight:800}
+.session h2{margin:0;color:var(--navy);font-family:Georgia,serif}.sub{color:var(--muted);font-size:14px}
+.content{padding:0 25px 28px;border-top:1px solid var(--line)}details.topic{border-bottom:1px solid var(--line);padding:4px 0}
+.topic summary{cursor:pointer;font-weight:750;color:var(--navy);padding:15px 3px}.topic .inside{padding:0 8px 18px}
+.label{font-size:12px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--blue);padding:3px 8px;border-radius:20px;text-transform:uppercase}
+h3{color:var(--navy);margin-top:22px} .note{border-left:4px solid var(--gold);background:#fbf8f0;padding:11px 14px;border-radius:0 8px 8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.mini{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fafcfd}
+.imgslot{border:1.5px dashed #9aabb8;border-radius:10px;padding:24px;text-align:center;color:var(--muted);margin-top:13px;background:#fafcfd}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:#eef3f6}
+footer{text-align:center;color:var(--muted);padding-top:25px;font-size:13px}
+@media(max-width:600px){header{padding:38px 22px}.wrap{padding:20px 12px}.session>summary,.content{padding-left:16px;padding-right:16px}}
+
+.menu-btn{position:fixed;top:16px;left:16px;z-index:1001;border:0;background:#17324d;color:white;box-shadow:0 4px 14px #0002;padding:11px 14px;border-radius:10px}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:300px;background:#10283d;color:white;z-index:1000;padding:74px 18px 24px;transform:translateX(-100%);transition:.25s;overflow:auto;box-shadow:8px 0 25px #0002}
+.sidebar.open{transform:translateX(0)}.sidebar h2{color:white;margin:0;font-family:Georgia,serif}.sidebar p{opacity:.65;font-size:13px}
+.nav-week{border-top:1px solid #ffffff25;padding:10px 0}.nav-week summary{cursor:pointer;font-weight:800;padding:8px 5px}
+.sidebar a{display:block;color:#e9f1f6;text-decoration:none;padding:9px 10px;border-radius:8px;font-size:14px}.sidebar a:hover{background:#ffffff16}
+.anchor{scroll-margin-top:20px}
+</style></head><body><button class="menu-btn" onclick="toggleMenu()">☰ Índice</button>
+<nav class="sidebar" id="sidebar">
+<h2>Construcción I</h2><p>Cuaderno digital · Índice</p>
+<details class="nav-week"><summary>Semana 1</summary><a href="#s1-1">Sesión 1 · Pendiente</a><a href="#s1-2">Sesión 2 · Pendiente</a></details>
+<details class="nav-week" open><summary>Semana 2</summary><a href="#s2-1">Sesión 1 · Planos de arquitectura</a><a href="#s2-2">Sesión 2 · Planos de estructuras</a></details>
+<details class="nav-week"><summary>Próximas semanas</summary><a href="#proxima">＋ Próxima sesión</a></details>
+</nav>
+<header><small>Ingeniería Civil · Construcción I</small><h1>Apuntes de clase</h1><p>Actividades y estudios previos al inicio de una obra de edificaciones · Archivo progresivo de estudio</p></header>
+<main class="wrap">
+<div class="toolbar"><button onclick="document.querySelectorAll('details').forEach(x=>x.open=true)">Abrir todo</button><button onclick="document.querySelectorAll('details').forEach(x=>x.open=false)">Cerrar todo</button></div>
+
+
+<details class="session anchor" id="s1-1"><summary><span class="num">01</span><div><h2>Semana 1 · Sesión 1</h2><div class="sub">Contenido pendiente de incorporar</div></div></summary>
+<div class="content"><div class="note">Espacio reservado. Aquí incorporaremos el PPT de la Semana 1 · Sesión 1 cuando lo envíes.</div></div></details>
+<details class="session anchor" id="s1-2"><summary><span class="num">02</span><div><h2>Semana 1 · Sesión 2</h2><div class="sub">Contenido pendiente de incorporar</div></div></summary>
+<div class="content"><div class="note">Espacio reservado. Aquí incorporaremos el PPT de la Semana 1 · Sesión 2 cuando lo envíes.</div></div></details>
+<details class="session anchor" id="s2-1" open><summary><span class="num">01</span><div><h2>Semana 2 · Sesión 1</h2><div class="sub">Lectura e interpretación de planos de arquitectura</div></div></summary>
+<div class="content">
+<div class="note"><b>Logro:</b> al finalizar la sesión, el alumno reconoce la normativa asociada a los planos de un proyecto.</div>
+
+<details class="topic" open><summary>1. Planos del proyecto · lectura e interpretación</summary><div class="inside">
+<p><span class="label">Definición</span></p>
+<p><b>Interpretar</b> es la capacidad de expresar, describir o representar algo. Los planos del proyecto son la representación gráfica y conceptual de una obra mediante plantas, perfiles, secciones transversales y dibujos complementarios de ejecución.</p>
+<p><span class="label">Argumenta</span></p>
+<p>Los planos muestran la <b>ubicación, naturaleza, dimensiones y detalles</b> del trabajo que se ejecutará. La sesión ubica su lectura dentro del conjunto de especialidades de una edificación: estructuras, arquitectura, instalaciones sanitarias, eléctricas y mecánicas, comunicaciones y gas, además de obras provisionales, trabajos preliminares, seguridad y salud.</p>
+</div></details>
+
+<details class="topic"><summary>2. Escalas</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Se expresa como <b>1/N o 1:N</b>, donde N representa cuánto se ha reducido el plano real.</p>
+<div class="grid"><div class="mini"><b>1:200</b><br>1 cm en el plano representa 200 cm = 2 m en el terreno.</div><div class="mini"><b>1:50</b><br>1 cm en el dibujo corresponde a 50 cm = 0.50 m en el terreno.</div></div>
+</div></details>
+
+<details class="topic"><summary>3. Medidas de planos y representación de líneas</summary><div class="inside">
+<p>Los planos de ingeniería tienen medidas estandarizadas en formatos, mobiliario y/o elementos; el PPT señala que las normas <b>ITINTEC</b> definen estas medidas.</p>
+<table><tr><th>Representación</th><th>Espesor indicado</th></tr><tr><td>Línea de muro</td><td>0.6 ó 0.8 mm / 0.4 ó 0.5 mm</td></tr><tr><td>Línea de acotamiento</td><td>0.1 ó 0.2 mm</td></tr><tr><td>Línea de contorno</td><td>0.2 ó 0.3 mm</td></tr><tr><td>Línea de ejes</td><td>0.1 ó 0.2 mm</td></tr><tr><td>Línea de sección</td><td>0.3 ó 0.5 mm</td></tr><tr><td>Línea de corte</td><td>0.1 ó 0.2 mm</td></tr></table>
+<p><b>Contorno visible:</b> sanitario, pasos de escalera, etc. <b>Proyectado:</b> ventana alta, volados, techo bajo, alero, etc.</p>
+<p>El PPT indica que las <b>líneas discontinuas</b> refieren a que el espacio no lleva techo y las <b>líneas continuas</b> a que el espacio no tiene piso en ese nivel.</p>
+<div class="imgslot">＋ Imagen recomendada: representación de líneas (págs. 31–34)</div>
+</div></details>
+
+<details class="topic"><summary>4. Arquitectura y proyecto arquitectónico · RNE G.040</summary><div class="inside">
+<p><span class="label">Definición</span></p>
+<p><b>Arquitectura:</b> arte y técnica de proyectar y construir edificios según reglas, técnicas y cánones estéticos determinados.</p>
+<p><b>Proyecto arquitectónico:</b> conjunto de documentos con información gráfica y técnica sobre el diseño de una habilitación urbana y/o edificación, cuyo objetivo es ejecutar la obra dentro de los límites del terreno. Se expresa en planos, gráficos, especificaciones técnicas y cálculos.</p>
+</div></details>
+
+<details class="topic"><summary>5. RNE GE.020 · Artículo 7 — Contenido del proyecto</summary><div class="inside">
+<p>El proyecto de arquitectura para edificación debe contener:</p>
+<p><b>a)</b> Plano de localización y ubicación.<br><b>b)</b> Planos de distribución por niveles.<br><b>c)</b> Planos de elevaciones.<br><b>d)</b> Planos de cortes por los elementos de circulación vertical.<br><b>e)</b> Planos de detalles constructivos.<br><b>f)</b> Planos de seguridad.<br><b>g)</b> Memoria descriptiva, incluyendo aspectos de seguridad.<br><b>h)</b> Especificaciones técnicas.</p>
+</div></details>
+
+<details class="topic"><summary>6. Plano de localización y ubicación · Artículo 8</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Tipo específico de plano del terreno utilizado en dibujo arquitectónico, a escala <b>no inferior a 1:1000</b>, con indicación de vías o espacios públicos próximos y otros elementos referenciales que faciliten su ubicación.</p>
+<p><span class="label">Argumenta</span></p><p>Su objetivo es definir dónde se encuentra la edificación o área del proyecto, mostrando la manzana completa y otras referencias.</p>
+<p><b>Debe contener:</b> sección de las vías frente al terreno; distancia a la esquina más cercana; norte magnético; altura y zonificación de terrenos colindantes; árboles y postes; número de niveles; cuadro de áreas; y parámetros urbanísticos y edificatorios exigibles.</p>
+<div class="imgslot">＋ Imagen recomendada: plano de localización y ubicación (págs. 10–12)</div>
+</div></details>
+
+<details class="topic"><summary>7. Planos de distribución por niveles · Artículo 9</summary><div class="inside">
+<p>En lo pertinente deben contener: <b>niveles de pisos terminados, dimensiones de ambientes, materiales de acabados, nombres de ambientes, mobiliario fijo, amoblamiento</b> cuando sea necesario para comprender el uso y <b>ubicación de tableros eléctricos</b>.</p>
+<h3>Vista en planta</h3><p>Es una vista ortogonal que ubica al observador en una vista paralela a <b>1.20 m sobre el nivel del piso terminado (N.P.T.)</b>, manteniendo magnitud, forma y proporción. El ejemplo muestra <b>N.P.T. +0.20</b> y <b>N.R. ±0.00</b>.</p>
+<div class="imgslot">＋ Imagen recomendada: planta / distribución por niveles (págs. 14–16)</div>
+</div></details>
+
+<details class="topic"><summary>8. Planos de cortes y elevaciones</summary><div class="inside">
+<p><span class="label">Elevación</span></p><p>Representación plana de las fachadas mediante proyección geométrica ortogonal, <b>sin perspectiva</b> y conservando todas sus proporciones.</p>
+<p><span class="label">Corte</span></p><p>Sección mediante un plano <b>vertical</b> de una edificación o proyecto de arquitectura. Sirve para definir relación de escala, proporción, alturas y elementos estructurales del proyecto frente al contexto.</p>
+<div class="imgslot">＋ Imagen recomendada: cortes y elevaciones (págs. 17–20)</div>
+</div></details>
+
+<details class="topic"><summary>9. Planos de seguridad · Artículo 11</summary><div class="inside">
+<p>Deben contener: <b>rutas de escape y salidas, luces de emergencia, extintores, gabinetes contra incendio y elementos de detección, señalización y zonas de seguridad.</b></p>
+<p>Los planos de evacuación o seguridad forman parte del sistema de señalización de emergencia y sirven para informar a los ocupantes sobre recorridos de evacuación, medios manuales de protección contra incendios y sistemas de alerta y alarma.</p>
+<div class="imgslot">＋ Imagen recomendada: plano de seguridad (págs. 21–23)</div>
+</div></details>
+
+<details class="topic"><summary>10. Memoria descriptiva</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Describe el proyecto desde sus características básicas y cómo se desarrolló la solución del problema arquitectónico.</p>
+<p><span class="label">Argumenta</span></p><p>Explica las fases mediante las cuales el arquitecto desarrolló la idea hasta llegar a una forma resumida y visual. El PPT la presenta como uno de los documentos iniciales del proyecto ejecutivo y como una “carta de presentación” que permite comprender el porqué de las ideas plasmadas.</p>
+<p><b>Ejemplo del PPT:</b> memoria arquitectónica de la UTP Sede Ate, con resumen, ubicación, accesos, área del terreno, usuarios, descripción por niveles, normativa y sistema constructivo/acabados.</p>
+</div></details>
+
+<details class="topic"><summary>11. Especificaciones técnicas de Arquitectura</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Documento donde se especifican con detalle los procedimientos arquitectónicos: modelo, calidad, fabricante, procedencia, dimensiones, código de color, forma, etc.</p>
+<p><b>Ejemplos desarrollados en el PPT:</b> trazado y replanteo, contrapisos, pisos y pinturas. Para el porcelanato PT1 se muestra formato 60×60; en pinturas se detallan preparación de superficies, imprimantes, manos y procedimientos de aplicación.</p>
+</div></details>
+
+<details class="topic"><summary>12. Simbología arquitectónica</summary><div class="inside">
+<p>La diapositiva presenta simbología asociada a <b>muros, ventanas, puertas, muebles y cotas</b>, junto con una vista de corte en 3D.</p>
+<div class="imgslot">＋ Imagen recomendada: simbología arquitectónica (pág. 30)</div>
+</div></details>
+
+<details class="topic"><summary>13. Vanos · puertas y ventanas</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Los <b>vanos</b> son aberturas en muros donde se colocan puertas, ventanas, mamparas, etc.</p>
+<p><b>Reglas indicadas:</b> las medidas son netas considerando acabados; en los cuadros no se especifican material ni detalles porque estos se consultan en el plano especial de detalles de puertas y ventanas; la información se coloca siempre en el interior del ambiente.</p>
+<p><b>Puertas mostradas:</b> una hoja, doble hoja, corrediza, plegable, elevadiza, empotrada, guía central y guía lateral, entre otras representaciones gráficas. El PPT continúa con la representación de ventanas.</p>
+<div class="imgslot">＋ Imagen recomendada: vanos, puertas y ventanas (págs. 35–38)</div>
+</div></details>
+
+<details class="topic"><summary>14. Parámetros urbanísticos y edificatorios</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Disposiciones técnicas que establecen las características que debe tener un proyecto de edificación.</p>
+<div class="grid"><div class="mini"><b>Densidad Neta (DN)</b><br>Indicador resultante de dividir el número de habitantes del proyecto propuesto entre el área del lote urbano para uso residencial.</div><div class="mini"><b>Coeficiente de Edificación (CE)</b><br>Cociente de dividir el área máxima que se puede techar entre el área total del lote.</div></div>
+<p><b>Ejercicio planteado:</b> edificio multifamiliar, 10 departamentos, 3 dormitorios por departamento, terreno de 300 m² y área total construida de 620 m².</p>
+</div></details>
+
+<details class="topic"><summary>15. Ejercicios de lectura de niveles</summary><div class="inside">
+<div class="note"><b>Bloque práctico.</b> Lo dejamos separado de la teoría para resolverlo paso a paso.</div>
+<p>El PPT plantea ejercicios para determinar <b>alturas libres (HL)</b> a partir de niveles N.P.T. y espesor de entrepisos, y otro para determinar los <b>N.P.T. de pisos superiores y el N.T.T.</b> a partir del N.F.P.</p>
+<div class="imgslot">＋ Ejercicios de las págs. 42–43</div>
+</div></details>
+
+<details class="topic"><summary>🧠 Repaso de la sesión</summary><div class="inside">
+<p><b>Planos del proyecto:</b> ubicación + naturaleza + dimensiones + detalles.<br>
+<b>Escala:</b> 1:N indica cuánto se redujo la realidad.<br>
+<b>GE.020:</b> localización/ubicación + distribución + elevaciones + cortes + detalles + seguridad + memoria + especificaciones.<br>
+<b>Planta:</b> vista ortogonal a 1.20 m sobre N.P.T.<br>
+<b>Elevación:</b> fachada ortogonal sin perspectiva.<br>
+<b>Corte:</b> sección vertical.<br>
+<b>Vano:</b> abertura en muro para puerta, ventana, mampara, etc.</p>
+</div></details>
+</div></details>
+
+<details class="session anchor" id="s2-2" open><summary><span class="num">02</span><div><h2>Semana 2 · Sesión 2</h2><div class="sub">Lectura e interpretación de planos de estructuras</div></div></summary>
+<div class="content">
+<div class="note"><b>Logro:</b> al finalizar la sesión, el alumno puede realizar una adecuada lectura de planos de estructuras.</div>
+
+<details class="topic" open><summary>1. ¿Qué son las estructuras?</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Para un ingeniero, una estructura es cualquier construcción formada por uno o varios elementos enlazados entre sí destinados a soportar la acción de fuerzas aplicadas.</p>
+<p><span class="label">Argumenta</span></p><p>El PPT señala como elementos habituales las <b>vigas, columnas, zapatas y techos</b>. También define la estructura como un conjunto de elementos dispuestos y ordenados cuya función es transmitir cargas verticales y horizontales al suelo para lograr un buen comportamiento estático y dinámico.</p>
+<p><b>Ejemplos del PPT:</b> una viga, un puente metálico, una torre de conducción de energía, la estructura de un edificio y un eje.</p>
+<p><b>Escalas usuales:</b> planta de cimentación 1/50 · encofrado de techos 1/50 · detalles 1/25, 1/20 y 1/10.</p>
+</div></details>
+
+<details class="topic"><summary>2. RNE GE.020 · Artículo 12</summary><div class="inside">
+<p>El proyecto de estructuras para edificaciones debe contener: <b>plano de cimentación</b> con referencia al estudio de suelos; <b>armadura de cada techo</b> indicando niveles y cargas; <b>columnas y placas</b>; <b>vigas y detalles</b>; memoria de cálculo; especificaciones técnicas de materiales estructurales; y procedimiento de ejecución cuando sea necesario.</p>
+</div></details>
+
+<details class="topic"><summary>3. NTE E.060 · Concreto armado</summary><div class="inside">
+<p><span class="label">Información mínima en planos</span></p>
+<p><b>a)</b> Normas empleadas en el diseño.<br><b>b)</b> Carga viva y otras cargas; cuando corresponda, tabiquería móvil.<br><b>c)</b> Resistencia especificada a compresión del concreto.<br><b>d)</b> Resistencia especificada o tipo de acero.<br><b>e)</b> Tamaño, localización y refuerzo de los elementos estructurales.<br><b>f)</b> Anclajes y empalmes.<br><b>g)</b> Juntas de separación y, cuando corresponda, contracción o expansión.<br><b>h)</b> Características de albañilería, mortero y refuerzo según E.070.<br><b>i)</b> Magnitud y localización de fuerzas de preesforzado.<br><b>j)</b> Resistencia mínima del concreto al aplicar postensado.<br><b>k)</b> Secuencia de aplicación de fuerzas en tendones de postensado.</p>
+</div></details>
+
+<details class="topic"><summary>4. NTE E.030 · Información en los planos</summary><div class="inside">
+<p>La diapositiva presenta el Artículo 9 — Presentación del Proyecto. En los planos estructurales se incluye: <b>sistema estructural sismorresistente; período fundamental de vibración en ambas direcciones; parámetros para definir fuerza sísmica o espectro; fuerza cortante en la base en ambas direcciones; desplazamiento máximo del último nivel y máximo desplazamiento relativo de entrepiso; y ubicación de estaciones acelerométricas cuando corresponda.</b></p>
+<div class="imgslot">＋ Imagen recomendada: cuadro de la E.030 (pág. 7)</div>
+</div></details>
+
+<details class="topic"><summary>5. Simbología y niveles</summary><div class="inside">
+<table><tr><th>Símbolo</th><th>Significado</th></tr><tr><td>NPT</td><td>Nivel de piso terminado</td></tr><tr><td>NFP</td><td>Nivel de falso piso</td></tr><tr><td>NTN</td><td>Nivel de terreno natural</td></tr><tr><td>NFC</td><td>Nivel de fondo de cimiento</td></tr><tr><td>NFSC</td><td>Nivel de fondo de sobrecimiento</td></tr><tr><td>NTT</td><td>Nivel de techo terminado</td></tr></table>
+<div class="imgslot">＋ Imagen recomendada: simbología completa (pág. 8)</div>
+</div></details>
+
+<details class="topic"><summary>6. Plano de cimentación</summary><div class="inside">
+<p>El PPT desarrolla esta parte principalmente mediante <b>representaciones gráficas</b> en las páginas 9–12. La GE.020 exige que el proyecto incluya el plano de cimentación con referencia al estudio de suelos.</p>
+<p>En las láminas se trabajan elementos de cimentación, ejes, dimensiones, niveles, secciones y detalles.</p>
+<div class="imgslot">＋ Imágenes recomendadas: planos de cimentación (págs. 9–12)</div>
+</div></details>
+
+<details class="topic"><summary>7. Plano de techo</summary><div class="inside">
+<p>Las páginas 13–15 presentan gráficamente el <b>plano de techo</b>. La GE.020 exige el plano de armadura de cada techo indicando niveles y cargas de diseño.</p>
+<div class="imgslot">＋ Imágenes recomendadas: plano de techo (págs. 13–15)</div>
+</div></details>
+
+<details class="topic"><summary>8. Cuadro de columnas</summary><div class="inside">
+<p><span class="label">Definición</span></p><p>Todo proyecto cuenta con varios tipos de columnas, que se presentan en un <b>cuadro resumen</b>. Su información no está normalizada, pero el PPT indica un contenido mínimo:</p>
+<p><b>1. Tipo:</b> C-1, COL1, etc.<br><b>2. Niveles:</b> nivel al que corresponde la columna.<br><b>3. Sección:</b> representación en planta para cada tipo.<br><b>4. Refuerzo longitudinal:</b> diámetro y cantidad de varillas. Ej.: 4Ø5/8”.<br><b>5. Refuerzo transversal:</b> diámetro, cantidad y espaciamiento de estribos.</p>
+<div class="imgslot">＋ Imagen recomendada: cuadro de columnas (pág. 16)</div>
+</div></details>
+
+<details class="topic"><summary>9. Placas</summary><div class="inside">
+<p>La página 17 presenta gráficamente las <b>placas</b>. El PPT no desarrolla aquí una definición textual adicional, por lo que conservamos esta sección como apoyo visual.</p>
+<div class="imgslot">＋ Imagen recomendada: placas (pág. 17)</div>
+</div></details>
+
+<details class="topic"><summary>10. Vigas · cortes longitudinales y transversales</summary><div class="inside">
+<h3>Cortes longitudinales</h3><p>La página 18 presenta la viga observada a lo largo de su desarrollo, mostrando gráficamente sus dimensiones, acero longitudinal, estribos e identificación.</p>
+<h3>Cortes transversales</h3><p>La página 19 presenta las secciones transversales de las vigas, permitiendo observar su sección y distribución del refuerzo.</p>
+<div class="imgslot">＋ Imágenes recomendadas: cortes longitudinales y transversales (págs. 18–19)</div>
+</div></details>
+
+<details class="topic"><summary>11. Detalles estructurales</summary><div class="inside">
+<p>Las páginas 20–21 reúnen detalles constructivos. Entre los elementos mostrados están encuentros y anclajes de vigas, doblado de estribos, traslape de acero, anclaje y recubrimiento en viguetas y corte típico de aligerado.</p>
+<div class="imgslot">＋ Imágenes recomendadas: detalles (págs. 20–21)</div>
+</div></details>
+
+<details class="topic"><summary>12. Especificaciones técnicas</summary><div class="inside">
+<h3>04.07.01.00 · Concreto para sobrecimiento</h3>
+<p><span class="label">Naturaleza</span></p><p>El ejemplo especifica concreto simple con mezcla <b>1:8 + 25% de piedra mediana</b>. El ejecutor es responsable del equipo, materiales y mano de obra; el Supervisor puede ordenar ensayos de calidad y verificar personal y equipo.</p>
+<p><span class="label">Procedimiento</span></p><p>El concreto es una mezcla de <b>agua, cemento y hormigón</b> preparada en mezcladora mecánica. El vaciado debe realizarse de manera monolítica, en un solo vaciado en toda la altura y longitud junto con los elementos de refuerzo. Deben respetarse medidas del encofrado, plomo, alineamiento y nivelación; evitar cangrejeras y realizar curado después del endurecimiento inicial.</p>
+<p>El PPT menciona sobrecimientos de <b>0.15 m de espesor</b>.</p>
+<p><span class="label">Forma de pago</span></p><p>Metros cúbicos (m³) de concreto × precio unitario de la partida indicada en el presupuesto.</p>
+<div class="imgslot">＋ Imagen recomendada: especificaciones técnicas (págs. 22–23)</div>
+</div></details>
+
+<details class="topic"><summary>13. Lectura e interpretación · Ejercicios</summary><div class="inside">
+<div class="note"><b>Bloque práctico separado.</b> Conservamos los ejemplos del PPT para desarrollarlos posteriormente paso a paso.</div>
+<div class="grid">
+<div class="mini"><b>Corte G-G</b><br>Cimentación ciclópea e=0.50 m; sobrecimiento armado e=0.15 m; acero longitudinal Ø1/2” y estribos Ø3/8” @0.20 m; NFC −2.65 m; NFP −1.15 m.</div>
+<div class="mini"><b>Zapata aislada</b><br>e=0.60 m; solado e=10 cm; C:H=1:12; recubrimiento 7.50 cm inferior y 5.00 cm lateral.</div>
+<div class="mini"><b>Zapata de borde/esquina</b><br>e=0.60 m; solado 10 cm; estribos de columna @0.10 m; no especifica recubrimiento.</div>
+<div class="mini"><b>Losa de escalera · D-D</b><br>Cimentación simple e=0.50 m; placa e=0.20 m; varillas 3/8” @0.20 m horizontal y vertical.</div>
+<div class="mini"><b>Corte A-A</b><br>Cimentación e=0.50 m y altura 0.90 m; placa e=0.20 m; NFP −1.15 m; NT +1.50 m; junta de 3 cm.</div>
+<div class="mini"><b>Cuadro de columnas</b><br>C-01 en T y C-02 rectangular; el ejemplo interpreta cantidad/diámetro de barras y confinamiento de estribos.</div>
+<div class="mini"><b>Losa aligerada</b><br>Unidireccional de 20 cm; ladrillos 15×30×30 cm @0.40 m entre ejes; viguetas de 10 cm.</div>
+<div class="mini"><b>Viga V-103</b><br>Viga chata 25×20 cm; 3Ø5/8” arriba y 3Ø5/8” abajo. El PPT señala incertidumbre en la lectura del confinamiento de estribos.</div>
+</div>
+<p class="note"><b>Corrección escrita en el propio PPT:</b> en la losa aligerada, donde dice Ø1/4” para acero de temperatura, <b>debe decir Ø6 mm @0.25 m</b>.</p>
+<div class="imgslot">＋ Ejercicios originales: págs. 24–31</div>
+</div></details>
+
+<details class="topic"><summary>🧠 Repaso de la sesión</summary><div class="inside">
+<p><b>Estructura:</b> elementos enlazados que soportan fuerzas y transmiten cargas.<br><b>GE.020:</b> cimentación + techos + columnas/placas + vigas/detalles + memoria + especificaciones + procedimiento.<br><b>E.060:</b> información mínima del proyecto estructural de concreto armado.<br><b>E.030:</b> información del diseño sismorresistente mostrada en los planos.<br><b>Niveles:</b> NPT · NFP · NTN · NFC · NFSC · NTT.<br><b>Cuadro de columnas:</b> tipo + niveles + sección + refuerzo longitudinal + refuerzo transversal.<br><b>Vigas:</b> lectura mediante cortes longitudinales y transversales.</p>
+</div></details>
+</div></details>
+
+<details class="session anchor" id="proxima"><summary><span class="num">＋</span><div><h2>Próxima sesión</h2><div class="sub">Plantilla preparada para seguir ampliando los apuntes</div></div></summary><div class="content"><div class="imgslot">Aquí añadiremos la siguiente clase manteniendo el mismo formato.</div></div></details>
+<footer>Ingeniería Civil · Apuntes progresivos de Construcción I</footer>
+</main><script>
+function toggleMenu(){document.getElementById('sidebar').classList.toggle('open')}
+document.querySelectorAll('.sidebar a').forEach(a=>a.addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open')));
+</script></body></html>
